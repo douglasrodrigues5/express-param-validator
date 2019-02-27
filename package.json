@@ -4,6 +4,8 @@
   "main": "./dist/param-validator.js",
   "author": "Douglas Rodrigues Guiamarães",
   "license": "MIT",
+  "keywords": ["expressjs", "express", "param", "validator", "param-validator"],
+  "homepage": "https://github.com/douglasrodrigues5/express-param-validator",
   "scripts": {
     "test": "yarn run build && jest",
     "build": "babel ./src/param-validator.js --out-dir dist"
