@@ -1,0 +1,18 @@
+{
+  "name": "express-param-validator",
+  "version": "1.0.0",
+  "main": "./dist/param-validator.js",
+  "author": "Douglas Rodrigues Guiamarães",
+  "license": "MIT",
+  "scripts": {
+    "test": "yarn run build && jest",
+    "build": "babel ./src/param-validator.js --out-dir dist"
+  },
+  "devDependencies": {
+    "@babel/cli": "latest",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-preset-minify": "^0.5.0",
+    "jest": "^24.1.0"
+  }
+}
