@@ -29,7 +29,7 @@ EXPRESS PARAM VALIDATOR
 
 ```javascript
   const { paramValidator } = require('express-param-validator')
-  
+
   // just like router.post('/add', (req, res) => {})
   const post = function(req, res) {
     paramValidator(
@@ -45,3 +45,5 @@ EXPRESS PARAM VALIDATOR
       )
   }
 ```
+
+*The idea is to improve my repository management in addition to maintaining and developing simple parameter validation*
