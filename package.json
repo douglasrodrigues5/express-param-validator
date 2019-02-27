@@ -1,6 +1,7 @@
 {
   "name": "express-param-validator",
   "version": "1.0.0",
+  "description": "A working in progress expressjs param validator",
   "main": "./dist/param-validator.js",
   "author": "Douglas Rodrigues Guiamarães",
   "license": "MIT",
