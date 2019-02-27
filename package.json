@@ -1,11 +1,17 @@
 {
   "name": "express-param-validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A working in progress expressjs param validator",
   "main": "./dist/param-validator.js",
   "author": "Douglas Rodrigues Guiamarães",
   "license": "MIT",
-  "keywords": ["expressjs", "express", "param", "validator", "param-validator"],
+  "keywords": [
+    "expressjs",
+    "express",
+    "param",
+    "validator",
+    "param-validator"
+  ],
   "homepage": "https://github.com/douglasrodrigues5/express-param-validator",
   "scripts": {
     "test": "yarn run build && jest",
