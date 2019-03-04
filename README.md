@@ -9,7 +9,7 @@ EXPRESS PARAM VALIDATOR
 * * ~~required~~
 * * ~~type~~
 * * ~~value~~
-* * **email**
+* * ~~email~~
 * * **maximum length**
 * * **minimum length**
 * * **size**
@@ -22,7 +22,6 @@ EXPRESS PARAM VALIDATOR
 ```
 
 ## Usage
-
 ```bash
   yarn add express-param-validator
 ```
@@ -30,6 +29,16 @@ EXPRESS PARAM VALIDATOR
 ```javascript
   const { paramValidator } = require('express-param-validator')
 
+  const REQUIRED_PARAMS = [
+    {name: 'token', type: 'string'},
+    {name: 'name', type: 'string'},
+    {name: 'type', type: 'string'},
+    {name: 'unit', type: 'number'},
+    {name: 'price', type: 'number'},
+    {name: 'expireDate', type: 'object'},
+    {name: 'discount', type: 'string', optional: true},
+    {name: 'status', type: 'string', oneOf: ['active', 'inactive']}
+  ]
   // just like router.post('/add', (req, res) => {})
   const post = function(req, res) {
     paramValidator(
