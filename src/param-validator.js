@@ -4,17 +4,17 @@ const DEFAULT_ERROR_CODES = {
   401: 'Unauthorized.'
 }
 
-export const paramValidator = (required, request, response, responseCallback) => {
+export const paramValidator = (params, request, response, responseCallback) => {
   const errors = () => {
-          const missingMessages = required
-            .filter(x => !request.body[x.name])
+          const missingMessages = params
+            .filter(x => !request.body[x.name] && !x.optional)
             .map(x => `Field '${x.name}' is missing. ( is required)`)
 
-          const typingMessages = required
+          const typingMessages = params
             .filter(x => typeof request.body[x.name] != x.type && request.body[x.name])
             .map(x => `'${x.name}' type is wrong (should be '${x.type}')`)
 
-          const valueMessages = required
+          const valueMessages = params
             .filter(x => x.oneOf && !x.oneOf.includes(request.body[x.name]))
             .map(x => `'${x.name}' value is not allowed. Should be one of: [${x.oneOf}]`)
 
@@ -26,7 +26,7 @@ export const paramValidator = (required, request, response, responseCallback) =>
   else if(responseCallback)
     return responseCallback(
       (errCode, errMsg) =>
-        response.status(errCode).send({ success: true, message: errMsg || DEFAULT_ERROR_CODES[errCode]}),
+        response.status(errCode).send({ success: false, message: errMsg || DEFAULT_ERROR_CODES[errCode]}),
       msg =>
         response.status(200).send({ success: true, message: msg }))
   else

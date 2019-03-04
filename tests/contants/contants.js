@@ -23,7 +23,7 @@ export const products = {
     price: 30,
     status: 'active',
     token: 'n0tS0ultr4s3cr3tm3g4t0k3n',
-    type: 'Fruta'
+    type: 'Fruta',
   },
   invalid_product_type_value: {
     expireDate: new Date(),
@@ -37,6 +37,7 @@ export const products = {
 
 export const messages = {
   missingUnit: "Field 'unit' is missing. ( is required)",
+  missingDiscount: "Field 'discount' is missing. ( is required)",
   statusNotAllowed: "'status' value is not allowed. Should be one of: [active,inactive]",
   invalidType: "'type' type is wrong (should be 'string')",
 }

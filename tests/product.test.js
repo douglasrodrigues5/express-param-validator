@@ -11,6 +11,7 @@ const REQUIRED_PARAMS = [
   {name: 'unit', type: 'number'},
   {name: 'price', type: 'number'},
   {name: 'expireDate', type: 'object'},
+  {name: 'discount', type: 'string', optional: true},
   {name: 'status', type: 'string', oneOf: ['active', 'inactive']}
 ]
 
@@ -59,5 +60,10 @@ describe('Test valid and invalid products', () => {
   it('Should send bad request response due to missing and invalid params values', () => {
     const response = post(REQ(products.invalid_product_type_value), RES)
     expect(response.message.includes(messages.statusNotAllowed)).toBeTruthy()
+  })
+
+  it('Should not detect optional params', () => {
+    const response = post(REQ(products.invalid_product), RES)
+    expect(response.message.includes(messages.missingDiscount)).toBeFalsy()
   })
 })
