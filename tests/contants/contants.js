@@ -44,13 +44,14 @@ export const users = {
   invalid_user: {
     name: 'Caio',
     age: 30,
-    email: 'caio@gmail'
+    email: 'caio@outlook'
   },
 }
 export const messages = {
   missingUnit: "Field 'unit' is missing. ( is required)",
   missingDiscount: "Field 'discount' is missing. ( is required)",
-  statusNotAllowed: "'status' value is not allowed. Should be one of: [active,inactive]",
+  notAllowedStatus: "'status' value is not allowed. Should be one of: [active,inactive]",
+  notAllowedWord: "'outlook' not allowed for param 'email'",
   invalidType: "'type' type is wrong (should be 'string')",
-  invalidEmail: "'caio@gmail' is not a valid e-mail. Should follow the pattern: xxxxxx@xxxxx.xxx",
+  invalidEmail: "'caio@outlook' is not a valid e-mail. Should follow the pattern: xxxxxx@xxxxx.xxx",
 }

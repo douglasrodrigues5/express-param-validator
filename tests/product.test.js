@@ -57,7 +57,7 @@ describe('Test valid and invalid products', () => {
 
   it('Should send bad request response due to missing and invalid params values', () => {
     const response = post(REQ(products.invalid_product_type_value), RES)
-    expect(response.message.includes(messages.statusNotAllowed)).toBeTruthy()
+    expect(response.message.includes(messages.notAllowedStatus)).toBeTruthy()
   })
 
   it('Should not detect optional params', () => {

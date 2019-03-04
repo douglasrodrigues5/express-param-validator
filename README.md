@@ -31,12 +31,13 @@ EXPRESS PARAM VALIDATOR
 
   const REQUIRED_PARAMS = [
     {name: 'token', type: 'string'},
-    {name: 'name', type: 'string'},
+    {name: 'name', type: 'string'}
     {name: 'type', type: 'string'},
     {name: 'unit', type: 'number'},
     {name: 'price', type: 'number'},
     {name: 'expireDate', type: 'object'},
     {name: 'discount', type: 'string', optional: true},
+    {name: 'email', type: 'email', blacklist: ['outlook']}
     {name: 'status', type: 'string', oneOf: ['active', 'inactive']}
   ]
   // just like router.post('/add', (req, res) => {})

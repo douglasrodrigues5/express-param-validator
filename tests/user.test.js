@@ -5,9 +5,9 @@ import { auth } from './helpers/auth'
 import { users, messages } from './contants/contants'
 
 const REQUIRED_PARAMS = [
-  {name: 'name', type: 'string'},
+  {name: 'name', type: 'string', blacklist: ['s', 'h', 'ai']},
   {name: 'age', type: 'number'},
-  {name: 'email', type: 'email'},
+  {name: 'email', type: 'email', blacklist: ['outlook']},
 ]
 
 // just like router.post('/add', (req, res) => {})
@@ -33,5 +33,10 @@ describe('Test valid and invalid user fields', () => {
   it('Should return success', () => {
     const response = post(REQ(users.valid_user), RES)
     expect(response.message.includes(messages.invalidEmail)).toBeFalsy()
+  })
+
+  it('Should send 403 due to word specified in blacklist', () => {
+    const response = post(REQ(users.invalid_user), RES)
+    expect(response.message.includes(messages.notAllowedWord)).toBeTruthy()
   })
 })
