@@ -29,8 +29,6 @@ const post = (req, res) =>
         }
       )
 
-
-
 describe('Test valid and invalid products', () => {
   it('Should send a valid response according product params and token validation', () => {
     const response = post(REQ(products.valid_product), RES)
