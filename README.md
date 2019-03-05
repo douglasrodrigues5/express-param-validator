@@ -1,5 +1,3 @@
-**_Study purposes only._**
-
 EXPRESS PARAM VALIDATOR
 ===
 
@@ -13,7 +11,7 @@ EXPRESS PARAM VALIDATOR
 * * **maximum length**
 * * **minimum length**
 * * **size**
-* * **not allowed characters**
+* * ~~not allowed words(blacklist)~~
 * Create user friendly method(s) to generate the validation object
 
 ## Testing:
@@ -40,6 +38,7 @@ EXPRESS PARAM VALIDATOR
     {name: 'email', type: 'email', blacklist: ['outlook']}
     {name: 'status', type: 'string', oneOf: ['active', 'inactive']}
   ]
+
   // just like router.post('/add', (req, res) => {})
   const post = function(req, res) {
     paramValidator(
@@ -56,4 +55,3 @@ EXPRESS PARAM VALIDATOR
   }
 ```
 
-*The idea is to improve my repository management in addition to maintaining and developing simple parameter validation*
