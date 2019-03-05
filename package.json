@@ -1,7 +1,7 @@
 {
   "name": "express-param-validator",
   "version": "1.1.1",
-  "description": "A working in progress expressjs param validator",
+  "description": "A work in progress expressjs param validator",
   "main": "index.js",
   "author": "Douglas Rodrigues Guimarães",
   "license": "MIT",
