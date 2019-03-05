@@ -12,7 +12,7 @@ EXPRESS PARAM VALIDATOR
 * * **minimum length**
 * * **size**
 * * ~~not allowed words(blacklist)~~
-* Create user friendly method(s) to generate the validation object
+* Create user friendly method(s) to generate validation objects
 
 ## Testing:
 ```bash
