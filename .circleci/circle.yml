@@ -1,0 +1,38 @@
+prod_only: &prod_only
+  filters:
+    branches:
+      only: master
+
+version: 2.1
+jobs:
+  test:
+    description: test files
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run:
+          name: Install Packages
+          command: npm i
+      - checkout
+      - run:
+          name: Test
+          command: npm test
+  build:
+    description: Install npm
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - run:
+          name: Install npm packages
+          command: npm i
+workflows:
+  test:
+    jobs:
+      - build:
+          <<: *prod_only
+      - test:
+          <<: *prod_only
+          requires:
+            - build
