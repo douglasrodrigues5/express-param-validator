@@ -27,10 +27,9 @@ jobs:
       - run:
           name: Install npm packages
           command: npm i
-      - checkout
       - run:
-        name: Run build command
-        command: npm run build
+          name: Run build command
+          command: npm run build
 workflows:
   test:
     jobs:
