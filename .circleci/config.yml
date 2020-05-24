@@ -14,7 +14,9 @@ jobs:
       - run:
           name: Install Packages
           command: npm i
-      - checkout
+      - run:
+          name: Run build command
+          command: npm run build
       - run:
           name: Test
           command: npm test
