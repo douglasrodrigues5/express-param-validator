@@ -1,6 +1,6 @@
 {
   "name": "express-param-validator",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A work in progress expressjs param validator",
   "main": "index.js",
   "author": "Douglas Rodrigues Guimarães",
@@ -14,7 +14,7 @@
   ],
   "homepage": "https://github.com/douglasrodrigues5/express-param-validator",
   "scripts": {
-    "test": "yarn run build && jest",
+    "test": "jest",
     "build": "babel ./src/param-validator.js --out-dir dist"
   },
   "devDependencies": {

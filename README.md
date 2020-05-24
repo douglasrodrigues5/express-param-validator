@@ -1,27 +1,29 @@
-EXPRESS PARAM VALIDATOR
-===
+# EXPRESS PARAM VALIDATOR
 
 # TODO:
-* Doc existing code
-* Add validation options: 
-* * ~~required~~
-* * ~~type~~
-* * ~~value~~
-* * ~~email~~
-* * **maximum length**
-* * **minimum length**
-* * **size**
-* * ~~not allowed words(blacklist)~~
-* Create user friendly method(s) to generate validation objects
+
+- Doc existing code
+- Add validation options:
+- - ~~required~~
+- - ~~type~~
+- - ~~value~~
+- - ~~email~~
+- - **maximum length**
+- - **minimum length**
+- - **size**
+- - ~~not allowed words(blacklist)~~
+- Create user friendly method(s) to generate validation objects
 
 ## Testing:
+
 ```bash
-  yarn run test
+  npm test
 ```
 
 ## Usage
+
 ```bash
-  yarn add express-param-validator
+  npm i -S express-param-validator
 ```
 
 ```javascript
@@ -44,7 +46,7 @@ EXPRESS PARAM VALIDATOR
     paramValidator(
         REQUIRED_PARAMS,
         req,
-        res, 
+        res,
         function (sendError, sendSuccess) {
           if(auth(req.body.token))
             return sendSuccess('successfull message')
@@ -54,4 +56,3 @@ EXPRESS PARAM VALIDATOR
       )
   }
 ```
-
