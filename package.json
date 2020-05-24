@@ -3,7 +3,7 @@
   "version": "1.1.2",
   "description": "A work in progress expressjs param validator",
   "main": "index.js",
-  "author": "Douglas Rodrigues Guimarães",
+  "author": "Douglas Guimarães",
   "license": "MIT",
   "keywords": [
     "expressjs",
@@ -12,7 +12,7 @@
     "validator",
     "param-validator"
   ],
-  "homepage": "https://github.com/douglasrodrigues5/express-param-validator",
+  "homepage": "https://github.com/gorda0/express-param-validator",
   "scripts": {
     "test": "jest",
     "build": "babel ./src/param-validator.js --out-dir dist"
