@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/gorda0/express-param-validator/tree/master.svg?style=svg)](https://circleci.com/gh/gorda0/express-param-validator/tree/master)
+
 # EXPRESS PARAM VALIDATOR
 
 # TODO:
