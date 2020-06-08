@@ -1,5 +1,5 @@
 {
-  "name": "express-param-validator",
+  "name": "@gorda0/express-param-validator",
   "version": "1.1.2",
   "description": "A work in progress expressjs param validator",
   "main": "index.js",
