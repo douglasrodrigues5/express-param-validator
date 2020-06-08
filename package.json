@@ -12,6 +12,10 @@
     "validator",
     "param-validator"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gorda0/express-param-validator.git"
+  },
   "homepage": "https://github.com/gorda0/express-param-validator",
   "scripts": {
     "test": "jest",
